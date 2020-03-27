@@ -5,7 +5,7 @@ require_once(DIRECTORY_CONTROLLERS."/IController.interface.php");
 /**
  * Ovladac zajistujici vypsani uvodni stranky.
  */
-class LoginController implements IController {
+class OdpovediController implements IController {
 
     /** @var DatabaseModel $db  Sprava databaze. */
     private $db;
@@ -13,21 +13,26 @@ class LoginController implements IController {
     /**
      * Inicializace pripojeni k databazi.
      */
+
     public function __construct() {
         // inicializace prace s DB
         require_once (DIRECTORY_MODELS ."/MyDatabase.class.php");
         $this->db = new MyDatabase();
     }
 
-    //TODO osetreni inputu string
-
-    function overitHeslo(string $login, string $heslo) {
-        $overeni = false;
-        if ($this->db->userLogin($login, $heslo)){
-            $overeni = true;
+    function optionNadpisyOtazky() {
+        $nadpisy = $this->db->nadpisyOtazek();
+        $optionNadpisy = "";
+        foreach ($nadpisy as $nadpis) {
+            $optionNadpisy .= "<option value='$nadpis[idOTAZKA]'>$nadpis[nadpis]</option>";
         }
-        return $overeni;
+        return $optionNadpisy;
     }
+
+    function getOtazku($idOtazky) {
+        return $this->db->vybranaOtazka($idOtazky);
+    }
+
 
     /**
      * Vrati obsah uvodni stranky.
@@ -40,29 +45,18 @@ class LoginController implements IController {
         $tplData = [];
         // nazev
         $tplData['title'] = $pageTitle;
+        $tplData['option-otazky'] = $this->optionNadpisyOtazky();
 
-        if (isset($_POST['action'])) {
-            if ($_POST['action'] == 'login') {
-                $login = $_POST['login'];
-                //$heslo = password_hash($_POST['heslo'], PASSWORD_DEFAULT);
-                $oldHeslo = $this->db->getHeslo($login);
-                //$hash = password_hash($_POST['heslo'], PASSWORD_DEFAULT);
-                //$verify = password_verify($_POST['heslo'], $oldHeslo['heslo']);
-                if (password_verify($_POST['heslo'], $oldHeslo['heslo'])) {
-                    $tplData['verify'] = true;
-                    $tplData['login'] = $login;
-                    $tplData['heslo'] = password_hash($_POST['heslo'], PASSWORD_DEFAULT);
-                }else {
-                    $tplData['verify'] = false;
-                }
-            }
+        if (isset($_POST['otazka'])) {
+            $otazka = $this->getOtazku($_POST['otazka']);
+            $tplData['otazka'] = array('nadpis'=>$otazka[0]['nadpis'], 'tazaci'=>$otazka[0]['jmeno_tazaciho'], 'datum'=>$otazka[0]['datum'], 'obsah'=>$otazka[0]['obsah']);
         }
 
         //// vypsani prislusne sablony
         // zapnu output buffer pro odchyceni vypisu sablony
         ob_start();
         // pripojim sablonu, cimz ji i vykonam
-        require(DIRECTORY_VIEWS ."/LoginTemplate.tpl.php");
+        require(DIRECTORY_VIEWS ."/OdpovediTemplate.tpl.php");
         // ziskam obsah output bufferu, tj. vypsanou sablonu
         $obsah = ob_get_clean();
 

@@ -4,19 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Webové stránky sdružení Valprojekt.">
-    <meta name="keywords" content="Valprojekt,projektová činnost,plány,budovy,stavby,vyměření">
-    <meta name="author" content="Tomas Vyleta">
 
     <!-- Icon next to the title -->
-    <link rel="shortcut icon" type="image/x-icon" href="pic/icons/icon.png"/>
-    <title>Valprojekt</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./pic/icons/icon.png"/>
+    <title><?php echo $tplData['title'] ?></title>
 
-    <?php include "views/public/elem/scripts.php"; ?>
+    <?php include "./views/elem/head.php"; ?>
 
     <!-- JavaScript files-->
     <script src="js/login.js"></script>
-
     <!-- CSS files-->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,7 +21,7 @@
 <body>
 
 <!-- Navbar -->
-<?php include "views/public/elem/navbar.php" ?>
+<?php include "./views/elem/navbar.php" ?>
 
 <main>
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -52,7 +48,7 @@
                     <!-- The slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="carousel-slide mx-auto d-block" src="pic/carou/meeting-2284501_960_720.jpg"
+                            <img class="carousel-slide mx-auto d-block" src="./pic/carou/meeting-2284501_960_720.jpg"
                                  alt="Dum">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Vše na míru</h5>
@@ -60,7 +56,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="carousel-slide mx-auto d-block" src="pic/carou/architecture-1836070_960_720.jpg"
+                            <img class="carousel-slide mx-auto d-block" src="./pic/carou/architecture-1836070_960_720.jpg"
                                  alt="Lide">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Stavby snů</h5>
@@ -68,7 +64,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="carousel-slide mx-auto d-block" src="pic/carou/building-plan-354233_960_720.jpg"
+                            <img class="carousel-slide mx-auto d-block" src="./pic/carou/building-plan-354233_960_720.jpg"
                                  alt="Vykres">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Plánek</h5>
@@ -161,7 +157,7 @@
 </main>
 
 <!-- Footer, under the main container -->
-<?php include "elem/footer.php" ?>
+<?php include "./views/elem/footer.php" ?>
 
 </body>
 </html>

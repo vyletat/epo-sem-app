@@ -8,7 +8,7 @@
 /** Adresa serveru. */
 define("DB_SERVER","localhost"); // https://students.kiv.zcu.cz
 /** Nazev databaze. */
-define("DB_NAME","baka-database");
+define("DB_NAME","valprojekt-epo");
 /** Uzivatel databaze. */
 define("DB_USER","root");
 /** Heslo uzivatele databaze */
@@ -18,13 +18,13 @@ define("DB_PASS","");
 //// Nazvy tabulek v DB ////
 
 /** Tabulky s daty. */
-define("TABLE_INCIDENT", "incident");
-define("TABLE_URGENCY", "urgency");
-define("TABLE_IMPACT", "impact");
-define("TABLE_PROJECT_PHASE", "project_phase");
-define("TABLE_NUMBER_OF_AFFECTIVE_MACHINES", "number_of_affective_machines");
-define("TABLE_REPRODUCTIVE", "reproductive");
-define("TABLE_PRIORITY", "priority");
+define("TABLE_ODPOVED", "odpoved");
+define("TABLE_OTEZKA", "otazka");
+define("TABLE_POZICE", "pozice");
+define("TABLE_PRIHLASOVACI_PRAVO", "prihlasovaci_pravo");
+define("TABLE_VYBAVENI", "vybaveni");
+define("TABLE_VYPUJCUJE_SI", "vypujcuje_si");
+define("TABLE_ZAMESTNANEC", "zamestnanec");
 
 
 //// Dostupne stranky webu ////
@@ -83,13 +83,13 @@ const WEB_PAGES = array(
     "zamestnanci" => array(
         "file_name" => "ZamestnanciController.class.php",
         "class_name" => "ZamestnanciController",
-        "title" => "IntraVal · Zaměstsnanci",
+        "title" => "IntraVal · Zaměstnanci",
         "name" => "Help"
     ),
-    "sprava-fora" => array(
-        "file_name" => "SpravaForaController.class.php",
-        "class_name" => "SpravaForaController",
-        "title" => "IntraVal · Správa fóra",
+    "odpovedi" => array(
+        "file_name" => "OdpovediController.class.php",
+        "class_name" => "OdpovediController",
+        "title" => "IntraVal · Odpovědi",
         "name" => "Help"
     )
     // TODO - doplnit spravu uzivatelu

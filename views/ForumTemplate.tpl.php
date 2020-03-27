@@ -7,19 +7,18 @@
 
     <!-- Icon next to the title -->
     <link rel="shortcut icon" type="image/x-icon" href="../../pic/icons/icon.png"/>
-    <title>Valprojekt - Dotazy</title>
+    <title><?php echo $tplData['title'] ?></title>
 
-    <?php include "./elem/scripts.php"; ?>
+    <?php include "./views/elem/head.php"; ?>
 
     <!-- JavaScript files-->
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
-
     <!-- CSS files-->
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <!-- Navbar -->
-<?php include "./elem/navbar.php" ?>
+<?php include "./views/elem/navbar.php" ?>
 
 <main>
     <!-- Comment contains from ... -->
@@ -262,7 +261,7 @@
 </main>
 
 <!-- Footer, under the main container -->
-<?php include "./elem/footer.php" ?>
+<?php include "./views/elem/footer.php" ?>
 
 <!-- reCAPTCHA script -->
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>

@@ -7,9 +7,9 @@
 
     <!-- Icon next to the title -->
     <link rel="shortcut icon" type="image/x-icon" href="../../pic/icons/icon.png"/>
-    <title>Valprojekt - Kontakty</title>
+    <title><?php echo $tplData['title'] ?></title>
 
-    <?php include "./elem/scripts.php"; ?>
+    <?php include "./views/elem/head.php"; ?>
 
     <!-- JavaScript files-->
 
@@ -19,7 +19,7 @@
 
 <body>
 <!-- Navbar -->
-<?php include "./elem/navbar.php" ?>
+<?php include "./views/elem/navbar.php" ?>
 
 <main>
     <div class="container">
@@ -111,6 +111,6 @@
 </main>
 
 <!-- Footer, under the main container -->
-<?php include "./elem/footer.php" ?>
+<?php include "./views/elem/footer.php" ?>
 </body>
 </html>

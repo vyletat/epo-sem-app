@@ -4,16 +4,16 @@
             <h5>Záložka</h5>
             <ul class="list-unstyled text-small">
                 <li>
-                    <a class="text-muted" href="view/public/kontakty.inc.php">Kontakty</a>
+                    <a class="text-muted" href="./?page=kontakty">Kontakty</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="view/public/reference.inc.php">Reference</a>
+                    <a class="text-muted" href="./?page=reference">Reference</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="view/public/sluzby.inc.php">Nabídka služeb</a>
+                    <a class="text-muted" href="./?page=sluzby">Nabídka služeb</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="view/public/forum.inc.php">Dotazy</a>
+                    <a class="text-muted" href="./?page=forum">Dotazy</a>
                 </li>
             </ul>
         </div>

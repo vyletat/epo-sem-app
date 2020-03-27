@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark sticky-top justify-content-between">
     <!-- Main brand with href to home -->
-    <a class="navbar-brand" href="view/public/uvod.inc.php">Valprojekt</a>
+    <a class="navbar-brand" href="./?page=home">Valprojekt</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,16 +9,16 @@
         <!-- Left navbar -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="view/public/kontakty.inc.php"><i class="fas fa-address-book"></i> Kontakty</a>
+                <a class="nav-link" href="./?page=kontakty"><i class="fas fa-address-book"></i> Kontakty</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="view/public/reference.inc.php"><i class="fas fa-user"></i> Reference</a>
+                <a class="nav-link" href="./?page=reference"><i class="fas fa-user"></i> Reference</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="view/public/sluzby.inc.php"><i class="fas fa-drafting-compass"></i> Nabidka sluzeb</a>
+                <a class="nav-link" href="./?page=sluzby"><i class="fas fa-drafting-compass"></i> Nabidka sluzeb</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="view/public/forum.inc.php"><i class="far fa-comment-alt"></i> Dotazy</a>
+                <a class="nav-link" href="./?page=forum"><i class="far fa-comment-alt"></i> Dotazy</a>
             </li>
             <!-- DropDown menu
             <li class="nav-item dropdown">
@@ -33,7 +33,7 @@
         <!-- Right navbar -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="view/public/sign-in.inc.php" target="_blank">Sprava <i class="fas fa-external-link-alt"></i></a>
+                <a class="nav-link" href="./?page=login" target="_blank">Sprava <i class="fas fa-external-link-alt"></i></a>
             </li>
         </ul>
     </div>

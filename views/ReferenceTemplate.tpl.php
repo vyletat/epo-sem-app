@@ -7,19 +7,19 @@
 
     <!-- Icon next to the title -->
     <link rel="shortcut icon" type="image/x-icon" href="../../pic/icons/icon.png"/>
-    <title>Valprojekt - Reference</title>
+    <title><?php echo $tplData['title'] ?></title>
 
-    <?php include "./elem/scripts.php"; ?>
+    <?php include "./views/elem/head.php"; ?>
 
     <!-- JavaScript files-->
 
     <!-- CSS files-->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 <!-- Navbar -->
-<?php include "./elem/navbar.php" ?>
+<?php include "./views/elem/navbar.php" ?>
 
 <main>
     <div class="container">
@@ -33,7 +33,7 @@
             <!-- First card -->
             <div class="col-sm-6">
                 <div class="card">
-                    <img alt="Tomáš Vyleta" src="../../pic/ref/me.jpg" class="card-img-top rounded-top">
+                    <img alt="Tomáš Vyleta" src="./pic/ref/me.jpg" class="card-img-top rounded-top">
                     <!--
                         <div class="card-header">
                             Tomas Vyleta
@@ -81,7 +81,7 @@
             <!-- Second card -->
             <div class="col-sm-6">
                 <div class="card">
-                    <img alt="Viktor Hnízdil" src="../../pic/ref/hnizdil.jpeg" class="photo card-img-top rounded-top">
+                    <img alt="Viktor Hnízdil" src="./pic/ref/hnizdil.jpeg" class="photo card-img-top rounded-top">
                     <div class="card-body">
                         <h5 class="card-title">Viktor Hnízdil</h5>
                         <p class="card-text">
@@ -125,7 +125,7 @@
             <!-- Third card -->
             <div class="col-sm-6">
                 <div class="card">
-                    <img alt="Ivana Navrátilová" src="../../pic/ref/navratilova.jpeg" class="card-img-top rounded-top">
+                    <img alt="Ivana Navrátilová" src="./pic/ref/navratilova.jpeg" class="card-img-top rounded-top">
                     <div class="card-body">
                         <h5 class="card-title">Ivana Navrátilová</h5>
                         <p class="card-text">
@@ -165,7 +165,7 @@
             <!-- Fourth card -->
             <div class="col-sm-6">
                 <div class="card">
-                    <img alt="Stanislav Linhart" src="../../pic/ref/linhart.jpeg" class="card-img-top">
+                    <img alt="Stanislav Linhart" src="./pic/ref/linhart.jpeg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Stanislav Linhart</h5>
                         <p class="card-text">
@@ -223,6 +223,6 @@
 </main>
 
 <!-- Footer, under the main container -->
-<?php include "./elem/footer.php" ?>
+<?php include "./views/elem/footer.php" ?>
 </body>
 </html>

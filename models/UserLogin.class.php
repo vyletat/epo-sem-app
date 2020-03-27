@@ -20,7 +20,7 @@ class UserLogin{
     public function __construct(){
         include_once("MySessions.class.php");
         // inicializuju objekt sessny
-        $this->ses = new MySession;
+        $this->ses = new MySession();
     }
     
     /**
